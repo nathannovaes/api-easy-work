@@ -34,7 +34,7 @@ class Notice extends Model
     /** 
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
-    public function company(): HasOne
+    public function category(): HasOne
     {
         return $this->hasOne(Category::class, 'id', 'category_id');
     }
