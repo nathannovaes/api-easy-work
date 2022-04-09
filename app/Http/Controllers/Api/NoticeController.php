@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Services\NoticeService;
 use App\Http\Controllers\Controller;
-use App\Models\Notice;
 use App\Transformers\NoticeTransformer;
 
 class NoticeController extends Controller
@@ -14,15 +13,8 @@ class NoticeController extends Controller
      * @var \App\Services\Notice\NoticeService $noticeService
      */
     protected $noticeService;
-
-    /**
-     * @var \App\Services\QrCode\QrCodeService $qrCodeService
-     */
-    protected $qrCodeService;
     
-    public function __construct(
-        NoticeService $noticeService
-    )
+    public function __construct(NoticeService $noticeService)
     {
         $this->noticeService = $noticeService;
     }

@@ -15,7 +15,8 @@ class NoticeTransformer
                 'id' => $notice->id,
                 'name' => $notice->name,
                 'description' => $notice->description,
-                'category' => $notice->category->name
+                'category' => $notice->category->name,
+                'category_id' => $notice->category->id
             ];
         }
         return $response;
